@@ -24,9 +24,9 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-black/70 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-2xl dark:bg-white/30 dark:text-black ">
+    <header className="bg-black/50 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-2xl dark:bg-white/30 dark:text-black ">
       <div className="px-4 py-4 flex justify-between items-center ">
-        <div className="text-2xl font-bold">
+        <div className="text-2xl font-bold dark:text-black text-white">
           Magic<span className="text-blue-500">Face</span>
         </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
             onClick={() => dispatch(toggleTheme())}
             className="p-0 m-0 bg-transparent border-none outline-none focus:outline-none "
           >
-            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            {darkMode ? <Sun size={20} /> : <Moon size={20} className="text-white" />}
           </button>
         </nav>
 
